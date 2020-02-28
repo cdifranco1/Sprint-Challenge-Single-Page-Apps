@@ -1,7 +1,7 @@
 import React from "react";
 import {
   Card, CardImg, CardBody,
-  CardTitle, CardSubtitle, Button
+  CardTitle, CardSubtitle
 } from 'reactstrap';
 
 export default function CharacterCard({character}) {
@@ -13,7 +13,6 @@ export default function CharacterCard({character}) {
         <CardSubtitle><strong>Species: </strong>{character.species}</CardSubtitle>
         <CardSubtitle><strong>Status: </strong>{character.status}</CardSubtitle>
         <CardSubtitle><strong>Location: </strong>{character.location.name}</CardSubtitle>
-        <Button>Button</Button>
       </CardBody>
     </Card>
   )
