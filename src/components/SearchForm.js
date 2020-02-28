@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button } from 'reactstrap';
 
-export default function SearchForm({handleSearch, searchTerm}) {
+export default function SearchForm({onSubmit, searchTerm, onChange}) {
   return (
     <section className="search-form">
-      <form>
+      <form onSubmit={onSubmit}>
         <label htmlFor="search">Search: </label>
-        <input type="text" onChange={handleSearch} value={searchTerm} name="search" placeholder="Rick Sanchez"></input>
-        <Button type="submit"/>
+        <input type="text" value={searchTerm} onChange={onChange} name="search" placeholder="Rick Sanchez"></input>
+        <Button type="submit" style={{padding: "2%", marginLeft: 2%}}/>
       </form>
     </section>
   );
